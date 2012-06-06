@@ -1,4 +1,6 @@
 <?php
+namespace NadebLive\DataForm\Interfaces;
+
 interface FormElementInterface
 {
 	public function getType();

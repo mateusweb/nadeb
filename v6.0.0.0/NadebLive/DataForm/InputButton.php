@@ -1,5 +1,8 @@
-<?php 
-include_once 'Component/DataFormComponent.php';
+<?php
+namespace NadebLive\DataForm;
+
+use NadebLive\DataForm\Component\DataFormComponent;
+use NadebLive\Xml\ElementXml;
 
 class InputButton extends DataFormComponent
 {
@@ -8,14 +11,14 @@ class InputButton extends DataFormComponent
 		$this->label = null;
 		$this->element = null;
 		$this->properties = $properties;
-	
+
 		$this->element = ($name) ? $this->createElement( $name, $label, $properties ) : '';
 	}
-	
+
 	protected function createElement($name, $value, $properties)
 	{
 		$this->name = $name;
-		
+
 		$element = new ElementXml( 'input' );
 		$element->type = 'button';
 		$element->id = $name;
@@ -23,17 +26,17 @@ class InputButton extends DataFormComponent
 		$element->name = $name;
 		$element->value = $value;
 		if($properties) foreach ($properties as $key => $val) $element->$key = $val;
-	
+
 		return $element;
 	}
-	
+
 	protected function createLabel($name, $label)
 	{
 		$lb = new ElementXml( 'label' );
 		$lb->for = $name;
 		$lb->class = 'label-' . $name;
 		$lb->addElement( $label );
-		
+
 		return $lb;
 	}
 }

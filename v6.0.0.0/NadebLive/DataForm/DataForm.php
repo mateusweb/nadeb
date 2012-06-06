@@ -1,17 +1,24 @@
-<?php 
-include_once 'Xml/ElementXml.php';
-include_once 'Select.php';
-include_once 'InputText.php';
-include_once 'TextArea.php';
-include_once 'JSEditor.php';
-include_once 'InputFile.php';
-include_once 'RadioButton.php';
-include_once 'Checkbox.php';
-include_once 'InputHidden.php';
-include_once 'InputPassword.php';
-include_once 'JSFolder.php';
-include_once 'InputSubmit.php';
-include_once 'InputButton.php';
+<?php
+namespace NadebLive\DataForm;
+
+use NadebLive\DataForm\Component\DataFormComponent;
+use NadebLive\Xml\ElementXml;
+use NadebLive\DataForm\InputText;
+use NadebLive\DataForm\InputPassword;
+use NadebLive\DataForm\InputSubmit;
+
+//include_once 'Select.php';
+//include_once 'InputText.php';
+//include_once 'TextArea.php';
+//include_once 'JSEditor.php';
+//include_once 'InputFile.php';
+//include_once 'RadioButton.php';
+//include_once 'Checkbox.php';
+//include_once 'InputHidden.php';
+//include_once 'InputPassword.php';
+//include_once 'JSFolder.php';
+//include_once 'InputSubmit.php';
+//include_once 'InputButton.php';
 
 class DataForm
 {
@@ -27,14 +34,14 @@ class DataForm
 	{
 		$this->title = null;
 		$this->jsFolder = null;
-		
+
 		$this->dl = new ElementXml( 'dl' );
 		$this->dl->class = 'dl-' . $name;
-		
+
 		$this->fieldset = new ElementXml( 'fieldset' );
 		$this->fieldset->class = 'fieldset-' . $name;
 		$this->fieldset->addElement( $this->dl );
-		
+
 		$this->element = new ElementXml( 'form' );
 		$this->element->id = $name;
 		$this->element->class = $name;
@@ -44,75 +51,75 @@ class DataForm
 		$this->element->enctype = 'multipart/form-data';
 		$this->element->addElement( $this->fieldset );
 	}
-	
+
 	public function setData( array $data = null)
 	{
 		$this->data = $data;
 	}
-	
+
 	public function add(DataFormComponent $element)
 	{
 		$this->dl->addElement( $this->crateDT(  $element ) );
 		$this->dl->addElement( $this->crateDD(  $element ) );
-		
+
 		$this->elementMap[$element->getId()] = $element->getType();
 	}
-	
+
 	public function jsFolder(JSFolder $element)
 	{
 		$this->dl->addElement( $this->crateDD(  $element ) );
 		$this->jsFolder = $element->folderComponent( $element );
-		
+
 		$this->elementMap[$element->getId()] = $element->getType();
 	}
-	
+
 	public function title($text)
 	{
 		$this->title = new ElementXml( 'h2' );
 		$this->title->class = 'session-title';
 		$this->title->addElement( $text );
 	}
-	
+
 	public function fieldset($name)
 	{
 		$this->dl = new ElementXml( 'dl' );
 		$this->dl->class = 'dl-' . $name;
-		
+
 		$this->fieldset = new ElementXml( 'fieldset' );
 		$this->fieldset->class = 'fieldset-' . $name;
 		$this->fieldset->addElement( $this->dl );
-		
+
 		$this->element->addElement( $this->fieldset );
 	}
-	
+
 	public function label($name, $value)
 	{
 		$label = new ElementXml( 'label' );
 		$label->class = 'label-' . $name;
 		$label->addElement( $value );
-		
+
 		$dt = new ElementXml( 'dt' );
 		$dt->class = 'dt-' . $name;
 		$dt->addElement( $label );
-		
+
 		$this->dl->addElement( $dt );
 	}
-	
+
 	public function form()
 	{
-		return $this->element; 
-	} 
-	
+		return $this->element;
+	}
+
 	public function get()
 	{
 		return $this->title . $this->element . $this->jsFolder;
 	}
-	
+
 	public function getElementMap()
 	{
 		return $this->elementMap;
 	}
-	
+
 	public function getDataToInsert($post, $file)
 	{
 		foreach( $this->elementMap as $key => $value )
@@ -126,10 +133,10 @@ class DataForm
 				$data[$key] = !is_array( $post[ $key ] ) ? $post[ $key ] : implode( ',',$post[ $key ] ) ;
 			}
 		}
-		
+
 		return $data;
 	}
-	
+
 	private function crateDT(DataFormComponent $element)
 	{
 		if( isset( $this->data[ $element->getID() ] ) ) $obj = $element->changeValue( $this->data[ $element->getID() ] );
@@ -139,13 +146,13 @@ class DataForm
 			$dt->id = $element->getID() . '-label';
 			$dt->class = $element->getID() . '-label';
 			$dt->addElement( $element->getLabel() );
-		
+
 			return $dt;
 		}
-		
+
 		return false;
 	}
-	
+
 	private function crateDD(DataFormComponent $element)
 	{
 		if( isset( $this->data[ $element->getID() ] ) ) $obj = $element->changeValue( $this->data[ $element->getID() ] );
@@ -155,10 +162,10 @@ class DataForm
 			$dd->id = $element->getID() . '-object';
 			$dd->class = $element->getID() . '-object';
 			$dd->addElement( $element->getElement() );
-		
+
 			return $dd;
 		}
-		
+
 		return $element;
 	}
 }
