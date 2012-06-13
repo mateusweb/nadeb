@@ -1,6 +1,9 @@
 <?php 
-include_once 'Xml/ElementXml.php';
-include_once 'DataGrid/Interfaces/DataGridInterface.php';
+
+namespace NadebLive\DataGrid;
+
+use NadebLive\Xml\ElementXml;
+use NadebLive\DataGrid\Interfaces\DataGridInterface;
 
 class GridHeader implements DataGridInterface
 {

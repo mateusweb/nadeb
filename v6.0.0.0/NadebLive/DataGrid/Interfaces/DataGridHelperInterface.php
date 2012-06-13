@@ -1,4 +1,7 @@
 <?php
+
+namespace NadebLive\DataGrid\Interfaces;
+
 interface DataGridHelperInterface
 {
 	public function setData(array $data);

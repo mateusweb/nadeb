@@ -1,4 +1,7 @@
 <?php 
+
+namespace NadebLive\DataGrid\Component;
+
 abstract class ToolsComponent
 {
 	protected $class;

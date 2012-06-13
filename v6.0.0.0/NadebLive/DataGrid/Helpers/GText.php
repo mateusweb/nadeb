@@ -1,5 +1,9 @@
 <?php 
-include_once 'DataGrid/Interfaces/DataGridHelperInterface.php';
+
+namespace NadebLive\DataGrid\Helpers;
+
+use NadebLive\Xml\ElementXml;
+use NadebLive\DataGrid\Interfaces\DataGridHelperInterface;
 
 class GText implements DataGridHelperInterface
 {

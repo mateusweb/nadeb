@@ -1,5 +1,9 @@
 <?php 
-include 'DataGrid/Interfaces/SearchFormElementInterface.php';
+
+namespace NadebLive\DataGrid\Component;
+
+use NadebLive\DataGrid\Interfaces\SearchFormElementInterface;
+use NadebLive\Xml\ElementXml;
 
 abstract class SearchFormComponent implements SearchFormElementInterface
 {

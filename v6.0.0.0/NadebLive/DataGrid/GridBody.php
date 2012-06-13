@@ -1,9 +1,12 @@
 <?php 
-include_once 'Xml/ElementXml.php';
-include_once 'DataGrid/Interfaces/DataGridInterface.php';
-include_once 'DataGrid/Helpers/Gtext.php';
-include_once 'DataGrid/Helpers/GSwap.php';
-include_once 'DataGrid/Helpers/GArray.php';
+
+namespace NadebLive\DataGrid;
+
+use NadebLive\Xml\ElementXml;
+use NadebLive\DataGrid\Interfaces\DataGridInterface;
+use NadebLive\DataGrid\Helpers\Gtext;
+use NadebLive\DataGrid\Helpers\GSwap;
+use NadebLive\DataGrid\Helpers\GArray;
 
 class GridBody implements DataGridInterface
 {

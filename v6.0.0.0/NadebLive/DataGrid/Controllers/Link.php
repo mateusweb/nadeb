@@ -1,5 +1,9 @@
 <?php 
 
+namespace NadebLive\DataGrid\Controllers;
+
+use NadebLive\Xml\ElementXml;
+
 class Link
 {
 	private $element;

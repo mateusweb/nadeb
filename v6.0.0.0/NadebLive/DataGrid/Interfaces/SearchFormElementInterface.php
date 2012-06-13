@@ -1,4 +1,7 @@
 <?php
+
+namespace NadebLive\DataGrid\Interfaces;
+
 interface SearchFormElementInterface
 {
 	public function getType();

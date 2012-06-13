@@ -1,5 +1,9 @@
 <?php 
-include_once 'DataGrid/Component/ToolsComponent.php';
+
+namespace NadebLive\DataGrid\Tools;
+
+use NadebLive\Xml\ElementXml;
+use NadebLive\DataGrid\Component\ToolsComponent;
 
 class EditTool extends ToolsComponent
 {

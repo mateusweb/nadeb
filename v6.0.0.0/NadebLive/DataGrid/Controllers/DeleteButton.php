@@ -1,5 +1,10 @@
 <?php 
 
+namespace NadebLive\DataGrid\Controllers;
+
+use NadebLive\Xml\ElementXml;
+
+
 class DeleteButton
 {
 	private $element;
