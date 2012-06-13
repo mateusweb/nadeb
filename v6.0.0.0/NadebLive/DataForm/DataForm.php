@@ -105,6 +105,20 @@ class DataForm
 		$this->dl->addElement( $dt );
 	}
 
+	public function link($name, $value, $href)
+	{
+		$a = new ElementXml( 'a' );
+		$a->href = $href;
+		$a->class = $name;
+		$a->addElement( $value );
+
+		$dd = new ElementXml( 'dd' );
+		$dd->class = 'dd-' . $name;
+		$dd->addElement( $a );
+
+		$this->dl->addElement( $dd );
+	}
+
 	public function form()
 	{
 		return $this->element;
