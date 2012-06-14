@@ -138,6 +138,8 @@ class DataForm
 	{
 		foreach( $this->elementMap as $key => $value )
 		{
+			$value = str_replace("NadebLive\\DataForm\\", "", $value);
+
 			if( $value == 'InputFile' && isset( $file[ $key ][ 'name' ] ) )
 			{
 				$data[$key] = $file[ $key ][ 'name' ];
