@@ -52,9 +52,14 @@ class DataForm
 		$this->element->addElement( $this->fieldset );
 	}
 
-	public function setData( array $data = null)
+	public function setData( array $data = null )
 	{
 		$this->data = $data;
+	}
+
+	public function setAction( $action )
+	{
+		$this->element->action = preg_replace('|(\/)+|', '/', $action);
 	}
 
 	public function add(DataFormComponent $element)

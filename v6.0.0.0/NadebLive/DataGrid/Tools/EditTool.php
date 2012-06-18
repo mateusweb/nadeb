@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace NadebLive\DataGrid\Tools;
 
@@ -16,13 +16,13 @@ class EditTool extends ToolsComponent
 	{
 		$element = new ElementXml( 'td' );
 		$element->class = $this->class;
-		
+
 		$a = new ElementXml( 'a' );
 		$a->title = $this->label;
-		$a->href = $this->action . '/id/' . $primaryValue;
+		$a->href = preg_replace('|(\/)+|', '/', $this->action . '//////' . $primaryValue);
 		$a->addElement( $this->label );
 		$element->addElement( $a );
-		
+
 		return $element->__toString();
 	}
 
