@@ -19,7 +19,7 @@ class MoveTool extends ToolsComponent
 		
 		$a = new ElementXml( 'a' );
 		$a->title = $this->label;
-		$a->href = $this->action . '/move/' . $primaryValue;
+		$a->href = preg_replace('|(\/)+|', '/', $this->action);
 		$a->addElement( $this->label );
 		$element->addElement( $a );
 		
