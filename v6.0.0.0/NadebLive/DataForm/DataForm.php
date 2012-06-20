@@ -142,6 +142,7 @@ class DataForm
 
 	public function getDataToInsert($post, $file)
 	{
+        
 		foreach( $this->elementMap as $key => $value )
 		{
 			$value = str_replace("NadebLive\\DataForm\\", "", $value);
@@ -150,12 +151,12 @@ class DataForm
 			{
 				$data[$key] = $file[ $key ][ 'name' ];
 			}
-			if( $value != 'InputSubmit' && $value != 'InputButton' && $value != 'JSFolder' && $value != 'InputFile' && isset( $post[$key] ) )
+			if( $value != 'InputSubmit' && $value != 'InputButton' && $value != 'InputFile' && isset( $post[$key] ) )
 			{
 				$data[$key] = !is_array( $post[ $key ] ) ? $post[ $key ] : implode( ',',$post[ $key ] ) ;
 			}
 		}
-
+        
 		return $data;
 	}
 

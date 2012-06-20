@@ -19,8 +19,6 @@ class Upload
 			}
 
 			if( !$result[$key]['name'] ) unset( $result[$key] );
-
-
 		}
 
 		return $result;
@@ -39,7 +37,7 @@ class Upload
 
 	private function getFolder( $map, $key )
 	{
-		$path = $_SERVER['DOCUMENT_ROOT'] .'/'. ( isset( $map[$key]['path'] ) ? $map[$key]['path'] : $map['default']['path'] ) . '/';
+		$path = __ROOT__ .'/'. ( isset( $map[$key]['path'] ) ? $map[$key]['path'] : $map['default']['path'] ) . '/';
 		$path = preg_replace( '|(\/)+|', '/', $path );
 
 		if( !is_dir( $path ) ) mkdir( $path, 0777, true );
