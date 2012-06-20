@@ -39,12 +39,12 @@ class JSFolder extends DataFormComponent
 
 	public function folderComponent(JSFolder $element)
 	{
-		$header      = HeaderController::get_instance();
-		$header->js  = "library/NadebZend/Components/Javascript/jquery_plugins/swfobject.js";
-
-		$js = JScontroller::get_instance();
-		$js->JSInstance = "admin_lightbox";
-		$js->JSInstance = "admin_JSFolder";
+//		$header      = HeaderController::get_instance();
+//		$header->js  = "library/NadebZend/Components/Javascript/jquery_plugins/swfobject.js";
+//
+//		$js = JScontroller::get_instance();
+//		$js->JSInstance = "admin_lightbox";
+//		$js->JSInstance = "admin_JSFolder";
 
 		$h1 = new ElementXml('h1');
 		$h1->addElement($element->getLabel());
@@ -55,7 +55,7 @@ class JSFolder extends DataFormComponent
 
 		$rootPath = new ElementXml('div');
 		$rootPath->id = 'root_path';
-		$rootPath->class = __ROOT__;
+		$rootPath->class = '/';
 		$rootPath->addElement( '' );
 
 		$formJsfolder = new ElementXml('form');

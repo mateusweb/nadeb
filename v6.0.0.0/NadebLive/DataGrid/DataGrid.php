@@ -14,19 +14,6 @@ use NadebLive\DataGrid\Tools\DeleteTool;
 use NadebLive\DataGrid\Tools\LinkTool;
 use NadebLive\DataGrid\Component\ToolsComponent;
 
-
-//include_once 'Xml/ElementXml.php';
-//include_once 'DataGrid/Interfaces/DataGridInterface.php';
-//include_once 'DataGrid/GridHeader.php';
-//include_once 'DataGrid/GridBody.php';
-//include_once 'DataGrid/GridFooter.php';
-//include_once 'Controllers/DeleteButton.php';
-//include_once 'Controllers/Link.php';
-//include_once 'Tools/MoveTool.php';
-//include_once 'Tools/EditTool.php';
-//include_once 'Tools/DeleteTool.php';
-//include_once 'Tools/LinkTool.php';
-
 class DataGrid
 {
 	private $header;
