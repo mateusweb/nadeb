@@ -3,7 +3,7 @@
 namespace NadebLive\DataGrid\Helpers;
 
 use NadebLive\Xml\ElementXml;
-use NadebLive\DataGrid\Interfaces\DataGridHelperInterfacet;
+use NadebLive\DataGrid\Interfaces\DataGridHelperInterface;
 
 class GSwap implements DataGridHelperInterface
 {
@@ -41,17 +41,20 @@ class GSwap implements DataGridHelperInterface
 	public function get()
 	{
 		$a = new ElementXml( 'a' );
-		$a->class = 'set_swap';
-		$a->id = "{$this->field}{$this->data[ $this->primary ]}";
-		$a->href = "{$this->rootPath}/swap/key/{$this->field}/id/{$this->data[ $this->primary ]}/trueValue/{$this->trueValue}/falseValue/{$this->falseValue}";
+		$a->class = 'set-swap ' . ($this->data[ $this->field ] == $this->trueValue ? 'set1' : 'set0');
+		$a->id = '{\true\ : \\' . $this->trueValue . '\, \false\ : \\' . $this->falseValue . '\, \field\ : \\'.$this->field.'\}';
+		$a->href = preg_replace( '|(\/)+|', '/', $this->rootPath . '/' . $this->data[ $this->primary ] . '/' );
 		
-		$img = new ElementXml( 'img' );
-		$img->src = '/library/NadebZend/Components/Template/images/' . ($this->data[ $this->field ] == $this->trueValue ? 'set_1.gif' : 'set_0.gif' );
-		$img->width = '15';
-		$img->height = '15';
-		$img->alt = 'Remover';
 		
-		$a->addElement( $img );
+//		$a->href = "{$this->rootPath}/swap/key/{$this->field}/id/{$this->data[ $this->primary ]}/trueValue/{$this->trueValue}/falseValue/{$this->falseValue}";
+		
+//		$img = new ElementXml( 'img' );
+//		$img->src = '/library/NadebZend/Components/Template/images/' . ($this->data[ $this->field ] == $this->trueValue ? 'set_1.gif' : 'set_0.gif' );
+//		$img->width = '15';
+//		$img->height = '15';
+//		$img->alt = 'Remover';
+		
+		$a->addElement( $this->data[ $this->field ] );
 		
 		return $a;
 	}

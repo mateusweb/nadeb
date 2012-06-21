@@ -4,6 +4,7 @@ namespace NadebLive\DataGrid;
 
 use NadebLive\Xml\ElementXml;
 use NadebLive\DataGrid\Interfaces\DataGridInterface;
+use NadebLive\DataGrid\Interfaces\DataGridHelperInterface;
 use NadebLive\DataGrid\Helpers\Gtext;
 use NadebLive\DataGrid\Helpers\GSwap;
 use NadebLive\DataGrid\Helpers\GArray;
@@ -27,6 +28,8 @@ class GridBody implements DataGridInterface
 
 			foreach ( $columns as $key => $value )
 			{
+                $checkInterface = @class_implements( $value );
+                
 				$obj = !( $value instanceof DataGridHelperInterface ) ? new GText() : $value;
 				$obj->setData( $array );
 				$obj->setField( is_int( $key ) ? $value : $key );

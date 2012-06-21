@@ -3,7 +3,7 @@
 namespace NadebLive\DataGrid\Helpers;
 
 use NadebLive\Xml\ElementXml;
-use NadebLive\DataGrid\Interfaces\DataGridHelperInterfacet;
+use NadebLive\DataGrid\Interfaces\DataGridHelperInterface;
 
 class GArray implements DataGridHelperInterface
 {
