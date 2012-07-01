@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<states>
+	<state abbr="AC" name="Acre" />
+	<state abbr="AL" name="Alagoas" />
+	<state abbr="AP" name="Amapá" />
+	<state abbr="AM" name="Amazonas" />
+	<state abbr="BA" name="Bahia" />
+	<state abbr="CE" name="Ceará" />
+	<state abbr="DF" name="Distrito Federal" />
+	<state abbr="ES" name="Espírito Santo" />
+	<state abbr="GO" name="Goiás" />
+	<state abbr="MA" name="Maranhão" />
+	<state abbr="MT" name="Mato Grosso" />
+	<state abbr="MS" name="Mato Grosso do Sul" />
+	<state abbr="MG" name="Minas Gerais" />
+	<state abbr="PA" name="Pará" />
+	<state abbr="PB" name="Paraíba" />
+	<state abbr="PR" name="Paraná" />
+	<state abbr="PE" name="Pernambuco" />
+	<state abbr="PI" name="Piauí" />
+	<state abbr="RJ" name="Rio de Janeiro" />
+	<state abbr="RN" name="Rio Grande do Norte" />
+	<state abbr="RS" name="Rio Grande do Sul" />
+	<state abbr="RO" name="Rondônia" />
+	<state abbr="RR" name="Roraima" />
+	<state abbr="SC" name="Santa Catarina" />
+	<state abbr="SP" name="São Paulo" />
+	<state abbr="SE" name="Sergipe" />
+	<state abbr="TO" name="Tocantins" />
+	<state abbr="--" name="Outros" />
+</states>
