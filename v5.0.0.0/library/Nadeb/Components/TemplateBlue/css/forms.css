@@ -1,0 +1,347 @@
+/*
+ * Buttons
+ */
+form fieldset dl.dl-buttons dt {display: none;}
+form fieldset dl.dl-buttons dd {
+	width: auto;
+	float: left;
+	clear: none;
+}
+
+.btn_login,
+.btn_save,
+.btn_cancel,
+.insert_button,
+.edit_button,
+.voltar_button,
+.delete_button {
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	border: none;
+	background: #4c97ae;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #f1f1f1;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 25px;
+	padding: 0 10px;
+	height: 25px;
+	margin: 0 5px 0 0;
+	border-radius: 5px;
+	width: auto;
+	text-shadow: 0px -1px 0px #6c6c6c;
+}
+
+.edit_button,
+.btn_cancel,
+.delete_button {
+	background: #8baeb4;
+}
+
+.edit_button:hover,
+.btn_login:hover,
+.voltar_button:hover,
+.btn_save:hover,
+.btn_cancel:hover,
+.insert_button:hover,
+.delete_button:hover {
+	background: #cb0000;
+}
+
+
+/*
+ * Formulario
+ */
+ 
+form {
+	overflow: auto;
+	float: left;
+	padding: 10px 0 0 10px;
+	width: 500px
+}
+
+form h2 {
+    border-bottom: 3px solid #8BAEB4;
+    color: #8BAEB4;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+form dt {
+	clear: both;
+	margin: 0 0 5px 0;
+}
+
+form dd {
+	clear: both;
+	margin: 0 0 15px 0;
+}
+
+form label {
+	font-size: 16px; 
+	color: #4c97ae;
+	text-transform: lowercase; 
+	text-shadow: 0px 1px 0px #ccc;
+	letter-spacing: 1px;
+}
+
+form .label-nadebTitle {
+	font-size: 24px; 
+	color: #4c97ae;
+	text-transform: lowercase; 
+	text-shadow: 0px 1px 0px #ccc;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #4c97ae;
+	padding: 5px 0;
+	display: block;
+}
+
+form dd input,
+form dd select,
+form dd textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 0 0 5px; 
+	background: #8baeb4;
+	border-radius: 5px; 
+	font-size: 16px; 
+	color: #f1f1f1; 
+	border: none;
+}
+
+form dd input {
+	width: 400px; 
+	height: 35px; 
+}
+
+form dd label {
+	float: left;
+	clear: both;
+	width: 495px;
+}
+
+form dd label span {
+	float: left;
+	height: 30px;
+	line-height: 30px; 
+	color: #8baeb4;
+}
+
+form dd input[type=radio],
+form dd input[type=checkbox] {
+	width: 25px; 
+	height: 25px; 
+	float: left;
+}
+
+form dd select {
+	width: 300px; 
+	height: 30px; 
+	padding: 5px; 
+}
+
+form dd textarea {
+	width: 495px;
+	height: 170px; 
+	padding-top: 3px; 
+}
+
+input:focus, textarea:focus {
+	background: #6a969d;
+}
+
+input[type=file] {
+	cursor: pointer;
+	width: 250px;
+	position: absolute;
+	
+	opacity:0;
+	-moz-opacity:0;
+	filter:alpha(opacity:0);
+}
+
+.fakeUpload {
+	width: 250px;
+	cursor: pointer;
+}
+
+
+
+/*
+ * JS Folder
+ */
+
+#jsfolder {
+	background: #eaeae8;
+	float: right;
+	width: 260px;
+	padding: 10px;
+	border-bottom-left-radius: 10px;
+	margin-top: 10px
+}
+
+#jsfolder form {
+	width: auto;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+}
+
+#jsfolder h1{
+	clear: both;
+	border-bottom: 3px solid #d2cfc6;
+	font-size:16px;
+	color: #8baeb4;
+	padding: 15px 0 5px;
+	font-weight: normal;
+}
+
+#jsfolder div {
+	clear: both;
+}
+
+#jsfolder ul {
+	
+	overflow: auto;
+	padding: 0;
+}
+
+#jsfolder li {
+	width: 100px;
+	height: 119px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background: #d2cfc6;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+#jsfolder li:hover {
+	background: #8baeb4;
+}
+
+#jsfolder li:hover input {
+	background: #d2cfc6;
+}
+
+#jsfolder li input {
+    border: none;
+    float: left;
+    font-size: 9px;
+    padding: 2px;
+    width: 80px;
+    height:14px;
+    background: #8baeb4;
+}
+
+.deleteFiles {
+	background:url("../images/ico_del_mini.png") center no-repeat;
+	height:18px;
+	width:16px;
+	font-size:8px;
+	float: left;
+	line-height: 8px;
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+
+/*
+ * Permission Controller
+ */
+ 
+#controllers-object ul li a,
+#controllers-object ul li strong {
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #999;
+}
+ 
+#controllers-object ul li {
+	clear: both;
+	display: block;
+	overflow: auto;
+	border-bottom: #ccc solid 1px;
+}
+
+#controllers-object ul li a {
+	background:url("../images/ico_close.png") left no-repeat;
+	padding-left: 20px;
+}
+
+#controllers-object ul li a.open {
+	background:url("../images/ico_open.png") left no-repeat;
+	padding-left: 20px;
+}
+
+#controllers-object ul li strong.open,
+#controllers-object ul li a.open {
+	color: #006600;
+}
+
+/* Search */
+#search.show form {
+	display:block;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	width: 180px;
+}
+#search.show form label {
+	font-size: 12px;
+}
+#search.show form dt,
+#search.show form dd {
+	width:180px;
+}
+#search.show form select {
+	width: 180px;
+	height: 25px;
+	font-size: 12px;
+}
+#search.show form input {
+	width: 175px;
+	height: 25px;
+	font-size: 12px;
+}
+
+#search.show fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 180px;
+}
+
+#search.show form input.end_date,
+#search.show form input.start_date {
+	width: 80px;
+}
+
+#search.show form input.start_date {
+	margin-right: 5px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

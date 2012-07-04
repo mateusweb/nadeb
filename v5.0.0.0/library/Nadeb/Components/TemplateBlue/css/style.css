@@ -1,0 +1,290 @@
+body {
+	background: #d2cfc6;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color: #beb08e;
+	
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	color: #999999;
+}
+h1 a {
+	color: #beb08e;
+}
+
+a {
+	color: #f0efeb;
+}
+.linkRed {
+	color: #beb08e;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 0 #CCCCCC;
+	text-transform: lowercase;
+}
+
+#header {
+	height: 75px;
+	width: 100%;
+	background: #f0efeb;
+	border-bottom: solid 5px #8baeb4;
+	padding: 10px 0;
+}
+
+#header .wrapper {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	text-decoration: none;
+}
+
+#header h1 {
+	width: 390px;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+#header h1 a {
+    text-decoration: none;
+    display: block;
+}
+
+#header .nav {
+	width: 1000px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	overflow: auto;
+}
+
+#header .nav  ul {
+	float: right;
+}
+
+#header .nav  ul li,
+#header .nav  ul li a {
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+#header .nav  ul li {
+	float: left;
+	margin: 0;
+	background: #4c97ae;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#header .nav  ul li:hover {
+	background: #8baeb4;
+}
+
+#header .nav  ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0 10px;
+	height:20px;
+}
+
+#section {
+	width: 1000px;
+	min-height: 500px;
+	margin: 10px auto;
+	overflow: auto;
+}
+
+#section .article {
+	width: 800px;
+	min-height: 500px;
+	float:right;
+	background: #f1f1f1;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#section .sidebar {
+	width: 200px;
+	min-height: 500px;
+	float:left;
+}
+
+#section .sidebar ul {
+	background: #8baeb4;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 10px 5px;
+	margin-bottom: 10px;
+}
+
+#section .sidebar li{
+	margin-bottom: 15px;
+}
+
+#section .sidebar ul ul {
+	padding: 0;
+}
+
+#section .sidebar ul ul li {
+	padding: 0 0 0 10px;
+	margin: 2px 0;
+}
+#section .sidebar ul ul li a {
+	font-size: 13px;
+}
+
+#section .sidebar a {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 16px;
+	color: #f0efeb;
+	display: block;
+	padding: 4px 5px;
+}
+	
+#section .sidebar a:hover {
+	background: #4c97ae;
+	border-radius: 5px;
+}
+
+
+#footer {
+	width: 100%;
+	height: 35px;
+	background: #8baeb4;
+	
+	text-align: center;	
+}
+
+#footer a {
+	margin: 0;
+	line-height: 35px;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#footer a strong {
+	font-weight: bold;
+}
+
+.session-title {
+    border-bottom: 3px solid #4c97ae;
+    color: #4c97ae;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    margin: 0 10px;
+}
+
+
+/*
+ * Avisos
+ */
+#avisos {
+	background:#cb0000;
+	display:none;
+	color:#d2cfc6;
+	font-weight:bold;
+	font-size:1.2em;
+	line-height:18px;
+	padding:30px 10px 10px 10px;
+	position: fixed;
+	text-align:center;
+	width:300px;
+	margin:0 50%;
+	left:-150px;
+	top:0px;
+	z-index:9999;
+	
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.hideNadebAviso {
+	background: #4c97ae;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    top: 10px;
+    width: 20px;
+}
+
+/*
+ * Busca
+ */
+
+#section .sidebar #search-wrapper {
+	background: #f0efeb;
+	border-radius: 10px;
+	width: 180px;
+	overflow: auto;
+}
+
+#search form {display: none;}
+#search.show form {display:block;}
+
+.sidebar #search h4 {
+	text-align: left;
+	font-size: 14px;
+	color: #beb08e;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+
+.sidebar #search h4 a:hover,
+.sidebar #search h4 a {
+	background: url("../images/search-more.png") center no-repeat;
+	width: 24px;
+	height: 24px;
+	float: right;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar #search.show h4 a:hover,
+.sidebar #search.show h4 a {
+	background: url("../images/search-less.png") center no-repeat;
+}
+
+/*
+ * Busca
+ */
+#breadcrumb {
+	height: 20px;
+	border-bottom: solid 1px #BEB08E;
+}
+
+#breadcrumb span,
+#breadcrumb a {
+	float: left;
+	height: 20px;
+	text-decoration: none;
+	margin-left: 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #ccc;
+	text-transform: lowercase;
+	color: #BEB08E;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

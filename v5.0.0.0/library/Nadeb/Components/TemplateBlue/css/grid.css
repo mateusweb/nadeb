@@ -1,0 +1,268 @@
+form#fGrid {
+	width: auto;
+	float: none;
+	padding: 10px;
+}
+
+table {
+	font-size: 13px;
+	line-height: 16px;
+	color: #333333;
+	background: #FFF;
+	width: 100%;
+	text-transform: lowercase;
+}
+
+td, th {
+	color: #838383;
+	border-top: 1px solid #d2cfc6;
+	border-right: 1px solid #d2cfc6;
+	padding: .3em;
+}
+thead .buttons, tfoot .buttons { background: #F1F1F1;}
+thead .buttons th, 
+tfoot .buttons th {
+	background: #d2cfc6;
+	color: #000;
+	padding: 10px;
+} 
+thead .buttons th {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+} 
+tfoot .buttons th {
+	border: transparent;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+} 
+thead th, tfoot th {
+	border: transparent;
+	text-align: left;
+	font-weight: bold;
+	color: #FFF;
+	background: #8d8d8d;
+}
+tbody td a {
+	background: transparent;
+	color: #72724c;
+	text-decoration: none;
+}
+tbody td a:hover {
+	color: #9999ff;
+}
+tbody th a {
+	background: transparent;
+	color: #3C3734;
+	text-decoration: none;
+	font-weight:normal;
+}
+tbody th a:hover {
+	background: transparent;
+	color: #333333;
+}
+tbody th, tbody td {
+	vertical-align: top;
+	text-align: left;
+}
+tfoot td {
+	border: 1px solid #b3b3ff;
+	background: #C5BA85;
+}
+.odd {
+	background: #91AB59;
+}
+tbody tr:hover {
+	color: #333444;
+	background: #f1f1f1;
+}
+tbody tr:hover th,
+tbody tr.odd:hover th {
+	background: #f1f1f1;
+}
+
+.edit_editar,
+.edit_excluir,
+.edit_rel,
+.edit_relsub,
+.edit_draft,
+.edit_move,
+.edit_check {
+	width: 20px;
+	border-left: none;
+} 
+
+.edit_editar a,
+.edit_excluir a,
+.edit_rel a,
+.edit_relsub a,
+.edit_draft a,
+.edit_move a,
+.edit_check a {
+	display: block;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	background: url(../images/splash-actions.png);
+}
+.edit_editar a     {background-position: -53px top}
+.edit_excluir a    {background-position: right top}
+.edit_rel a        {background-position: left top}
+.edit_relsub a        {background-position: left top}
+.edit_draft a      {background-position: left top}
+.edit_move a       {background-position: -26px top}
+.edit_check a      {background-position: -85px top}
+
+.td_checkbox       {width: 15px}
+.td_checkbox input {width: auto}
+.edit_editar       {width: 15px}
+.edit_excluir      {width: 15px}
+.abRex {
+	float: right;
+	text-transform: capitalize;
+	font-size: 17px;
+	font-weight: 700;
+	padding: 5px 0 0 5px;
+}
+
+.ajaxSearch {
+	font-size: 15px;
+	font-weight: bold;
+	text-indent: 10px;
+	/*background: url("../images/ajax-loader.gif") 10px center no-repeat;
+	text-indent: 50px;*/
+	padding: 10px 0;
+}
+
+table tr td.tm1 {width: 1px}
+table tr td.tm2 {width: 2px}
+table tr td.tm3 {width: 3px}
+table tr td.tm4 {width: 4px}
+table tr td.tm5 {width: 5px}
+table tr td.tm6 {width: 6px}
+table tr td.tm7 {width: 7px}
+table tr td.tm8 {width: 8px}
+table tr td.tm9 {width: 9px}
+table tr td.tm10 {width: 10px}
+table tr td.tm11 {width: 11px}
+table tr td.tm12 {width: 12px}
+table tr td.tm13 {width: 13px}
+table tr td.tm14 {width: 14px}
+table tr td.tm15 {width: 15px}
+table tr td.tm16 {width: 16px}
+table tr td.tm17 {width: 17px}
+table tr td.tm18 {width: 18px}
+table tr td.tm19 {width: 19px}
+table tr td.tm20 {width: 20px}
+table tr td.tm21 {width: 21px}
+table tr td.tm22 {width: 22px}
+table tr td.tm23 {width: 23px}
+table tr td.tm24 {width: 24px}
+table tr td.tm25 {width: 25px}
+table tr td.tm26 {width: 26px}
+table tr td.tm27 {width: 27px}
+table tr td.tm28 {width: 28px}
+table tr td.tm29 {width: 29px}
+table tr td.tm30 {width: 30px}
+table tr td.tm31 {width: 31px}
+table tr td.tm32 {width: 32px}
+table tr td.tm33 {width: 33px}
+table tr td.tm34 {width: 34px}
+table tr td.tm35 {width: 35px}
+table tr td.tm36 {width: 36px}
+table tr td.tm37 {width: 37px}
+table tr td.tm38 {width: 38px}
+table tr td.tm39 {width: 39px}
+table tr td.tm40 {width: 40px}
+table tr td.tm41 {width: 41px}
+table tr td.tm42 {width: 42px}
+table tr td.tm43 {width: 43px}
+table tr td.tm44 {width: 44px}
+table tr td.tm45 {width: 45px}
+table tr td.tm46 {width: 46px}
+table tr td.tm47 {width: 47px}
+table tr td.tm48 {width: 48px}
+table tr td.tm49 {width: 49px}
+table tr td.tm50 {width: 50px}
+table tr td.tm51 {width: 51px}
+table tr td.tm52 {width: 52px}
+table tr td.tm53 {width: 53px}
+table tr td.tm54 {width: 54px}
+table tr td.tm55 {width: 55px}
+table tr td.tm56 {width: 56px}
+table tr td.tm57 {width: 57px}
+table tr td.tm58 {width: 58px}
+table tr td.tm59 {width: 59px}
+table tr td.tm60 {width: 60px}
+table tr td.tm71 {width: 71px}
+table tr td.tm72 {width: 72px}
+table tr td.tm73 {width: 73px}
+table tr td.tm74 {width: 74px}
+table tr td.tm75 {width: 75px}
+table tr td.tm76 {width: 76px}
+table tr td.tm77 {width: 77px}
+table tr td.tm78 {width: 78px}
+table tr td.tm79 {width: 79px}
+table tr td.tm80 {width: 80px}
+table tr td.tm81 {width: 81px}
+table tr td.tm82 {width: 82px}
+table tr td.tm83 {width: 83px}
+table tr td.tm84 {width: 84px}
+table tr td.tm85 {width: 85px}
+table tr td.tm86 {width: 86px}
+table tr td.tm87 {width: 87px}
+table tr td.tm88 {width: 88px}
+table tr td.tm89 {width: 89px}
+table tr td.tm90 {width: 90px}
+table tr td.tm91 {width: 91px}
+table tr td.tm92 {width: 92px}
+table tr td.tm93 {width: 93px}
+table tr td.tm94 {width: 94px}
+table tr td.tm95 {width: 95px}
+table tr td.tm96 {width: 96px}
+table tr td.tm97 {width: 97px}
+table tr td.tm98 {width: 98px}
+table tr td.tm99 {width: 99px}
+table tr td.tm100 {width: 100px}
+table tr td.tm111 {width: 111px}
+table tr td.tm112 {width: 112px}
+table tr td.tm113 {width: 113px}
+table tr td.tm114 {width: 114px}
+table tr td.tm115 {width: 115px}
+table tr td.tm116 {width: 116px}
+table tr td.tm117 {width: 117px}
+table tr td.tm118 {width: 118px}
+table tr td.tm119 {width: 119px}
+table tr td.tm120 {width: 120px}
+table tr td.tm121 {width: 121px}
+table tr td.tm122 {width: 122px}
+table tr td.tm123 {width: 123px}
+table tr td.tm124 {width: 124px}
+table tr td.tm125 {width: 125px}
+table tr td.tm126 {width: 126px}
+table tr td.tm127 {width: 127px}
+table tr td.tm128 {width: 128px}
+table tr td.tm129 {width: 129px}
+table tr td.tm130 {width: 130px}
+table tr td.tm131 {width: 131px}
+table tr td.tm132 {width: 132px}
+table tr td.tm133 {width: 133px}
+table tr td.tm134 {width: 134px}
+table tr td.tm135 {width: 135px}
+table tr td.tm136 {width: 136px}
+table tr td.tm137 {width: 137px}
+table tr td.tm138 {width: 138px}
+table tr td.tm139 {width: 139px}
+table tr td.tm140 {width: 140px}
+table tr td.tm141 {width: 141px}
+table tr td.tm142 {width: 142px}
+table tr td.tm143 {width: 143px}
+table tr td.tm144 {width: 144px}
+table tr td.tm145 {width: 145px}
+table tr td.tm146 {width: 146px}
+table tr td.tm147 {width: 147px}
+table tr td.tm148 {width: 148px}
+table tr td.tm149 {width: 149px}
+table tr td.tm150 {width: 150px}
+
+
