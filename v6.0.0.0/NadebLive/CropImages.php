@@ -14,11 +14,14 @@ class CropImages
 	private $atual_height;
 	private $final_width;
 	private $final_height;
+	private $bgRGB;
 	public $fixedTop;
 		
 	public function __construct()
 	{
 		$this->fixedTop  = false;
+		$this->bgRGB     = array( 220, 230, 240 );
+		
 	}
 	
 	public function set_patch($_value)
@@ -147,10 +150,18 @@ class CropImages
 		return $this;
 	}
 
+	public function set_bgRGB($red, $green, $blue)
+	{
+		
+	    $this->bgRGB = array( $red, $green, $blue );
+	    
+		return $this;
+	}
+
 	public function make_file()
 	{
 		$tmp_img = imagecreatetruecolor( $this->final_width,$this->final_height );
-		$white   = imagecolorallocate($tmp_img, 220, 230, 240);
+		$white   = imagecolorallocate( $tmp_img, $this->bgRGB[0], $this->bgRGB[1], $this->bgRGB[2] );
 		
 		imagefilledrectangle($tmp_img, 0, 0, $this->final_width, $this->final_height, $white);
 		@imagecopyresized( 
