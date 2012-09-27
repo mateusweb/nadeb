@@ -4,23 +4,6 @@ namespace NadebLive\DataForm;
 use NadebLive\DataForm\Component\DataFormComponent;
 use NadebLive\Xml\ElementXml;
 
-
-//use NadebLive\DataForm\InputText;
-//use NadebLive\DataForm\InputPassword;
-//use NadebLive\DataForm\InputSubmit;
-//include_once 'Select.php';
-//include_once 'InputText.php';
-//include_once 'TextArea.php';
-//include_once 'JSEditor.php';
-//include_once 'InputFile.php';
-//include_once 'RadioButton.php';
-//include_once 'Checkbox.php';
-//include_once 'InputHidden.php';
-//include_once 'InputPassword.php';
-//include_once 'JSFolder.php';
-//include_once 'InputSubmit.php';
-//include_once 'InputButton.php';
-
 class DataForm
 {
 	private $dl;
@@ -30,6 +13,7 @@ class DataForm
 	private $data;
 	private $jsFolder;
 	private $elementMap;
+	private $outerHtml;
 
 	public function __construct($name)
 	{
@@ -125,6 +109,11 @@ class DataForm
 		$this->dl->addElement( $dd );
 	}
 
+	public function outerHtml($html)
+	{
+		$this->outerHtml = $html;
+	}
+
 	public function form()
 	{
 		return $this->element;
@@ -132,7 +121,7 @@ class DataForm
 
 	public function get()
 	{
-		return $this->title . $this->element . $this->jsFolder;
+		return $this->title . $this->element . $this->jsFolder . $this->outerHtml;
 	}
 
 	public function getElementMap()
