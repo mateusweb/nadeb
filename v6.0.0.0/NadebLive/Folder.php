@@ -6,7 +6,6 @@ class Folder
 	public function listFolders($pasta)
 	{
 		$folder = "";
-		$pasta  = $_SERVER["DOCUMENT_ROOT"] .'/'. $pasta;
 		$pasta = preg_replace( '|(\/)+|', '/', $pasta );
 
 		if(is_dir($pasta))
@@ -30,7 +29,6 @@ class Folder
 	public function listFiles($pasta)
 	{
 		$files = "";
-		$pasta = $_SERVER["DOCUMENT_ROOT"] .'/'. $pasta;
 		$pasta = preg_replace( '|(\/)+|', '/', $pasta );
 
 		if(is_dir($pasta))
