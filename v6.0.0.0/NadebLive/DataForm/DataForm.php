@@ -180,4 +180,18 @@ class DataForm
 
 		return $element;
 	}
+	
+	public function createImageLink($imagePath)
+	{
+		$showImage = null;
+		if( $imagePath )
+		{
+			$showImage = new ElementXml( 'a' );
+			$showImage->class = 'lightbox linkRed';
+			$showImage->href = $imagePath;
+			$showImage->addElement( '[ver imagem]' );
+		}
+	
+		return $showImage;
+	}
 }
