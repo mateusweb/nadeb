@@ -14,6 +14,7 @@ class Upload
 
 			if( move_uploaded_file($tmpName, $path . $newName) )
 			{
+			    $result[$key]['path'] = $path;
 				$result[$key]['name'] = $newName;
 				if( is_file($path . $newName) ) chmod( $path . $newName , 0777 );
 			}
