@@ -3,9 +3,16 @@ namespace NadebLive;
 
 class Upload
 {
+	private $files;
+
+	public function __construct()
+	{
+		$this->files = $_FILES;
+	}
+	
 	public function sendFiles( array $map )
 	{
-		$result = $_FILES;
+		$result = $this->files;
 		foreach ($result as $key => $value)
 		{
 			$path    = $this->getFolder( $map, $key );
@@ -20,6 +27,29 @@ class Upload
 			}
 
 			if( !$result[$key]['name'] ) unset( $result[$key] );
+		}
+		
+		return $result;
+	}
+	
+	public function getSize()
+	{
+		$result = null;
+		foreach ($this->files as $key => $value)
+		{
+			$result[$key]['size'] = $value["size"];
+		}
+		
+		return $result;
+	}
+	
+	public function getType()
+	{
+		$result = null;
+		foreach ($this->files as $key => $value)
+		{
+			$type = explode( '/', $value["type"] );
+			$result[$key]['type'] = $type[0];
 		}
 		
 		return $result;

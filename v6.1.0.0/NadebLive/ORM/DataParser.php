@@ -1,6 +1,6 @@
 <?php
 
-namespace NadebLive\DataGrid\Component;
+namespace NadebLive\ORM;
 
 class DataParser
 {

@@ -35,7 +35,7 @@ class GridFooter implements DataGridInterface
 			$th = new ElementXml( 'th' );
 			$th->colspan = count( $dataGrid->getTools() );
 			$th->class = 'th_editar';
-			$th->addElement( 'Editar' );
+			$th->addElement( 'Tools' );
 						
 			$tr->addElement( $th );
 		}

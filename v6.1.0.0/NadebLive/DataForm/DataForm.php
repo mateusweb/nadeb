@@ -164,7 +164,7 @@ class DataForm
 		if( $element->getElement() )
 		{
 			$div = new ElementXml( 'div' );
-			$div->id = $element->getID() . '-object';
+// 			$div->id = $element->getID() . '-object';
 			$div->class = 'controls';
 			$div->addElement( $element->getElement() );
 

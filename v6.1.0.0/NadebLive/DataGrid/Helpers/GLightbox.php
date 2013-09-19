@@ -2,7 +2,7 @@
 
 namespace NadebLive\DataGrid\Helpers;
 
-use NadebLive\DataGrid\Component\DataParser;
+use NadebLive\ORM\DataParser;
 
 use NadebLive\DataGrid\Interfaces\DataGridHelperInterface;
 use NadebLive\Xml\ElementXml;

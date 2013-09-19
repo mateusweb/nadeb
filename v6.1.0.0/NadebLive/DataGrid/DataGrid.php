@@ -28,6 +28,7 @@ class DataGrid
 	private $primary;
 	private $getPrimary;
 	private $controllers;
+	private $outerHtml;
 	private static $instance;
 
 	public function __construct($name)
@@ -148,6 +149,11 @@ class DataGrid
 	{
 		return $this->primary;
 	}
+	
+	public function outerHtml($html)
+	{
+		$this->outerHtml = $html;
+	}
 
 	public function get()
 	{
@@ -157,6 +163,6 @@ class DataGrid
 		if( $this->form ) $this->form->addElement( $this->grid );
 		$grid = $this->form ? $this->form : $this->grid;
 
-		return  $this->title . $grid;
+		return  $this->title . $grid . $this->outerHtml;
 	}
 }
