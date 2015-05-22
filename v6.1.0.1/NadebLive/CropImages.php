@@ -22,7 +22,7 @@ class CropImages
 	{
 		$this->fixedTop  = false;
 		$this->bgRGB     = array( 220, 230, 240 );
-		$this->rootPath  = __ROOT__ . '/'
+		$this->rootPath  = __ROOT__ . '/';
 	}
 
 	public function overrideRootPath( $newRootPath )
