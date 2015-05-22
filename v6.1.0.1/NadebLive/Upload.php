@@ -58,7 +58,12 @@ class Upload
 		return $result;
 	}
 
-	private function hashName( $name )
+	public function getFile()
+	{
+		return $this->files;
+	}
+
+	public function hashName( $name )
 	{
 		$ar_name = explode(".",$name);
 		$ext = strtolower(".".$ar_name[count($ar_name)-1]);
@@ -69,7 +74,7 @@ class Upload
 	    return $new_name;
 	}
 
-	private function getFolder( $map, $key )
+	public function getFolder( $map, $key )
 	{
 		$path = __ROOT__ .'/'. ( isset( $map[$key]['path'] ) ? $map[$key]['path'] : $map['default']['path'] ) . '/';
 		$path = preg_replace( '|(\/)+|', '/', $path );
@@ -79,4 +84,5 @@ class Upload
 
 		return $path;
 	}
+
 }
