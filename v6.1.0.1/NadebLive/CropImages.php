@@ -15,13 +15,19 @@ class CropImages
 	private $final_width;
 	private $final_height;
 	private $bgRGB;
+	private $rootPath;
 	public $fixedTop;
 
 	public function __construct()
 	{
 		$this->fixedTop  = false;
 		$this->bgRGB     = array( 220, 230, 240 );
+		$this->rootPath  = __ROOT__ . '/'
+	}
 
+	public function overrideRootPath( $newRootPath )
+	{
+		$this->rootPath = $newRootPath;
 	}
 
 	public function set_patch($_value)
@@ -40,14 +46,14 @@ class CropImages
 
 	public function set_newName($_value)
 	{
-		$this->new_name = __ROOT__ . '/' . $this->patch . '/' . $_value;
+		$this->new_name = $this->rootPath . $this->patch . '/' . $_value;
 
 		return $this;
 	}
 
 	public function set_newSize($_w = null, $_h = null)
 	{
-		$path = __ROOT__ . '/' . $this->patch .'/'. $this->file;
+		$path = $this->rootPath . $this->patch .'/'. $this->file;
 		$path = preg_replace('/\/\/+/','/',$path);
 		$tmImg = getimagesize( $path );
 		$_h = ($_h) ? $_h : round( ($tmImg[1] / $tmImg[0]) * $_w );
@@ -60,7 +66,7 @@ class CropImages
 
 	public function create()
 	{
-	    $file = __ROOT__ . '/' . $this->patch . '/' . $this->file;
+	    $file = $this->rootPath . $this->patch . '/' . $this->file;
 	    if( is_file($file) )
 	    {
 	    	if( stripos( $file,"gif" ) )
