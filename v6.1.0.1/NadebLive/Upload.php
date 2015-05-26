@@ -23,7 +23,7 @@ class Upload
 			{
 			    $result[$key]['path'] = $path;
 				$result[$key]['name'] = $newName;
-				if( is_file($path . $newName) ) chmod( $path . $newName , 0777 );
+				// if( is_file($path . $newName) ) chmod( $path . $newName , 0777 );
 			}
 
 			if( !$result[$key]['name'] ) unset( $result[$key] );
@@ -80,7 +80,7 @@ class Upload
 		$path = preg_replace( '|(\/)+|', '/', $path );
 
 		if( !is_dir( $path ) ) mkdir( $path, 0777, true );
-		if(  is_dir( $path ) ) chmod( $path, 0777 );
+		// if(  is_dir( $path ) ) chmod( $path, 0777 );
 
 		return $path;
 	}
