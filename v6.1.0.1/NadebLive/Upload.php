@@ -8,6 +8,12 @@ class Upload
 	public function __construct()
 	{
 		$this->files = $_FILES;
+		$this->rootPath  = __ROOT__ . '/';
+	}
+
+	public function overrideRootPath( $newRootPath )
+	{
+		$this->rootPath = $newRootPath;
 	}
 	
 	public function sendFiles( array $map )
@@ -23,7 +29,6 @@ class Upload
 			{
 			    $result[$key]['path'] = $path;
 				$result[$key]['name'] = $newName;
-				// if( is_file($path . $newName) ) chmod( $path . $newName , 0777 );
 			}
 
 			if( !$result[$key]['name'] ) unset( $result[$key] );
@@ -76,11 +81,11 @@ class Upload
 
 	public function getFolder( $map, $key )
 	{
-		$path = __ROOT__ .'/'. ( isset( $map[$key]['path'] ) ? $map[$key]['path'] : $map['default']['path'] ) . '/';
+		$path = $this->rootPath .'/'. ( isset( $map[$key]['path'] ) ? $map[$key]['path'] : $map['default']['path'] ) . '/';
 		$path = preg_replace( '|(\/)+|', '/', $path );
 
 		if( !is_dir( $path ) ) mkdir( $path, 0777, true );
-		// if(  is_dir( $path ) ) chmod( $path, 0777 );
+		if(  is_dir( $path ) ) chmod( $path, 0777 );
 
 		return $path;
 	}
