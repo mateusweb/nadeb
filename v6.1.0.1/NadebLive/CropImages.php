@@ -64,24 +64,24 @@ class CropImages
 		return $this;
 	}
 
-	public function create()
+	public function create( $ext = null )
 	{
 	    $file = $this->rootPath . $this->patch . '/' . $this->file;
 	    if( is_file($file) )
 	    {
-	    	if( stripos( $file,"gif" ) )
+	    	if( stripos( $file,"gif" ) || $ext == "gif" )
 			{
 				$this->img = @imagecreatefromgif( $file );
 			}
-			elseif( stripos( $file,"png" ) )
+			elseif( stripos( $file,"png" ) || $ext == "png" )
 			{
 				$this->img = @imagecreatefrompng( $file );
 			}
-			elseif( stripos( $file,"jpg" ) )
+			elseif( stripos( $file,"jpg" ) || $ext == "jpg" )
 			{
 				$this->img = @imagecreatefromjpeg( $file );
 			}
-	    	elseif( stripos( $file,"jpeg" ) )
+	    	elseif( stripos( $file,"jpeg" ) || $ext == "jpeg" )
 			{
 				$this->img = @imagecreatefromjpeg( $file );
 			}
