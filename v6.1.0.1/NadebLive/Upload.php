@@ -85,7 +85,6 @@ class Upload
 		$path = preg_replace( '|(\/)+|', '/', $path );
 
 		if( !is_dir( $path ) ) mkdir( $path, 0777, true );
-		if(  is_dir( $path ) ) chmod( $path, 0777 );
 
 		return $path;
 	}
